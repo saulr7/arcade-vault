@@ -6,12 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Arcade Vault: a platform to play games online and compete for the highest score. The project follows a spec-driven workflow (`/spec` and `/spec-impl`) using the skills from https://github.com/Klerith/fernando-skills (installed with `npx skills@latest add Klerith/fernando-skills`). The codebase is currently the bare Create Next App scaffold (`app/layout.tsx`, `app/page.tsx`); no game features exist yet.
 
-## Commands
+## Skilss
 
-- `npm run dev` — start dev server (Turbopack)
-- `npm run build` / `npm run start` — production build / serve
-- `npm run lint` — ESLint (flat config, `eslint.config.mjs`)
-- No test runner is configured yet.
+Use always the frontend-design when working on FE changes
 
 ## Next.js version warning
 
