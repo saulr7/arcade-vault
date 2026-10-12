@@ -1,6 +1,6 @@
 # SPEC 01 — Arcade Vault UI MVP (design only)
 
-**Status:** approved
+**Status:** implemented
 **Depends on:** none
 **Date:** 2026-10-12
 **Objective:** Port the five screens in `references/templates/` (library, game detail, player, auth, hall of fame) to Next.js App Router routes, visually faithful to the templates, translated to English, with no real functionality.
