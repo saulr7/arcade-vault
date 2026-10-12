@@ -1,6 +1,6 @@
 # SPEC 02 — Homepage (landing page, design only)
 
-**Status:** Approved
+**Status:** implemented
 **Depends on:** SPEC 01
 **Date:** 2026-10-12
 **Objective:** Add the landing page from `references/templates/home-about/home.jsx` at `/`, visually faithful to the template and translated to English, and move the game library from `/` to `/games`.

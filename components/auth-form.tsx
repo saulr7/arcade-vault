@@ -68,7 +68,7 @@ export function AuthForm() {
         </form>
 
         <Link
-          href="/"
+          href="/games"
           className="btn ghost"
           style={{ width: "100%", marginTop: 10 }}
         >
