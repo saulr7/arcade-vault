@@ -1,6 +1,6 @@
 # SPEC 03 — About page and contact form (Resend)
 
-**Status:** approved
+**Status:** implemented
 **Depends on:** SPEC 01, SPEC 02
 **Date:** 2026-10-12
 **Objective:** Add an `/about` page (About + Contact sections) ported from `references/templates/home-about/about.jsx`, translated to English, whose contact form sends a real email to the team through Resend using a Server Action.

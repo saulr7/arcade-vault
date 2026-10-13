@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer
@@ -11,7 +13,10 @@ export function Footer() {
         letterSpacing: "0.16em",
       }}
     >
-      © 2026 ARCADE VAULT · MADE WITH PIXELS AND NEON · v2.6.0
+      © 2026 ARCADE VAULT · MADE WITH PIXELS AND NEON · v2.6.0 ·{" "}
+      <Link href="/about" className="footer-link">
+        ABOUT
+      </Link>
     </footer>
   );
 }
