@@ -1,6 +1,6 @@
 # SPEC 05 — Asteroids: the first playable game
 
-**Status:** approved
+**Status:** implemented
 **Depends on:** SPEC 01
 **Date:** 2026-10-14
 **Objective:** Port the standalone Asteroids game from `references/started-games/02-asteroids/` to a typed module that runs inside the existing player page for the `rocks` catalog entry, with the platform HUD, PAUSE, END and GAME OVER modal wired to the real game state.

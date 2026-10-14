@@ -80,7 +80,7 @@ export const GAMES: Game[] = [
     id: "rocks",
     title: "ROCKS",
     short: "Pulverize asteroids in zero gravity.",
-    long: "Your triangular ship drifts through absolute vacuum. Shoot and rotate to split rocks into ever smaller fragments. Watch out for UFOs on the horizon.",
+    long: "Your triangular ship drifts through absolute vacuum. Shoot and rotate to split rocks into ever smaller fragments. Grab the 3x power-up for a triple shot.",
     cat: "SHOOTER",
     cover: "cover-rocas",
     color: "yellow",
