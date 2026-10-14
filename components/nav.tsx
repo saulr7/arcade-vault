@@ -2,9 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 
-export function Nav() {
+// The auth controls are server-rendered (they read the session cookie) and
+// passed in as slots, each wrapped in <Suspense> by the layout.
+export function Nav({
+  desktopAuth,
+  mobileAuth,
+}: {
+  desktopAuth: ReactNode;
+  mobileAuth: ReactNode;
+}) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -12,7 +20,6 @@ export function Nav() {
   const libraryActive = pathname.startsWith("/games");
   const hallActive = pathname.startsWith("/hall-of-fame");
   const aboutActive = pathname.startsWith("/about");
-  const authActive = pathname.startsWith("/auth");
   const close = () => setOpen(false);
 
   return (
@@ -43,9 +50,7 @@ export function Nav() {
           <span className="coin"></span>
           <span>CREDITS · 03</span>
         </div>
-        <Link href="/auth" className="btn auth-btn">
-          Sign In
-        </Link>
+        {desktopAuth}
         <button
           type="button"
           className="btn ghost hamburger"
@@ -60,7 +65,13 @@ export function Nav() {
         className={"av-mobile-backdrop" + (open ? " open" : "")}
         onClick={close}
       ></div>
-      <aside className={"av-mobile-panel" + (open ? " open" : "")}>
+      <aside
+        className={"av-mobile-panel" + (open ? " open" : "")}
+        onClick={(e) => {
+          // Slotted links are server-rendered, so close the panel on any link click.
+          if ((e.target as HTMLElement).closest("a")) close();
+        }}
+      >
         <div className="pixel neon-cyan" style={{ fontSize: 11, marginBottom: 16 }}>
           MENU
         </div>
@@ -76,9 +87,7 @@ export function Nav() {
         <Link href="/about" className={aboutActive ? "active" : ""} onClick={close}>
           About
         </Link>
-        <Link href="/auth" className={authActive ? "active" : ""} onClick={close}>
-          Sign In
-        </Link>
+        {mobileAuth}
         <div style={{ flex: 1 }}></div>
         <div
           className="pixel"

@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Courier_Prime, JetBrains_Mono, Press_Start_2P } from "next/font/google";
+import { Suspense } from "react";
 import { Footer } from "@/components/footer";
 import { Nav } from "@/components/nav";
+import { NavAuth } from "@/components/nav-auth";
+import { SignInLink } from "@/components/sign-in-link";
 import "./globals.css";
 
 const pressStart = Press_Start_2P({
@@ -33,7 +36,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="av-bg" aria-hidden="true" />
         <div className="av-noise" aria-hidden="true" />
         <div className="av-root">
-          <Nav />
+          <Nav
+            desktopAuth={
+              <Suspense fallback={<SignInLink variant="desktop" />}>
+                <NavAuth variant="desktop" />
+              </Suspense>
+            }
+            mobileAuth={
+              <Suspense fallback={<SignInLink variant="mobile" />}>
+                <NavAuth variant="mobile" />
+              </Suspense>
+            }
+          />
           <main className="av-main">{children}</main>
           <Footer />
         </div>
