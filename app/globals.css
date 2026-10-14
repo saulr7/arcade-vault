@@ -683,6 +683,12 @@ a { color: inherit; text-decoration: none; }
   font-size: 12px;
   text-align: center;
 }
+/* Asteroids canvas: logical size stays 800x600, CSS scales it to the 4:3 screen */
+.asteroids-canvas {
+  position: absolute; inset: 0;
+  display: block;
+  width: 100%; height: 100%;
+}
 .crt-bottom {
   display: flex; align-items: center; justify-content: space-between;
   margin-top: 14px;
