@@ -1,6 +1,6 @@
 # SPEC 04 — Supabase foundation, email/password auth and profiles
 
-**Status:** Draft
+**Status:** approved
 **Depends on:** SPEC 01, SPEC 03
 **Date:** 2026-10-14
 **Objective:** Connect the app to Supabase with the `@supabase/ssr` clients and session refresh in `proxy.ts`, create a `profiles` table, and make the existing `/auth` screen perform real email/password sign-up, sign-in and sign-out, with the nav reflecting the signed-in user.
